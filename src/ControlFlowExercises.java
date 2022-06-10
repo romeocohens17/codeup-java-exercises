@@ -42,13 +42,13 @@ public class ControlFlowExercises {
 //                break;
 //        }
 
-        while (true) {
-            System.out.println("Can we get tickets to Mt.Splashmore?");
-            if(in.next().equalsIgnoreCase("yes")) {
-                System.out.println("It's about time!");
-                break;
-            }
-        }
+//        while (true) {
+//            System.out.println("Can we get tickets to Mt.Splashmore?");
+//            if(in.next().equalsIgnoreCase("yes")) {
+//                System.out.println("It's about time!");
+//                break;
+//            }
+//        }
 
 //        System.out.println("Can we get tickets to Mt.Splashmore?");
 //        while (!in.next().equalsIgnoreCase("yes")) {
@@ -56,11 +56,114 @@ public class ControlFlowExercises {
 //        }
 //        System.out.println("It's about time!");
 
-        for (int i = 0; i < 10; i++) {
-            if (i % 2 == 0) {
-                System.out.println("This will only appear 5x.");
-            }
+//        for (int i = 0; i < 10; i++) {
+//            if (i % 2 == 0) {
+//                System.out.println("This will only appear 5x.");
+//            }
+//        }
+
+//        int i = 5;
+//        while (i <= 15) {
+//            System.out.println("i is " + i);
+//            i++;
+//        }
+
+//        int x = 0;
+//        do {
+//            System.out.println(x += 2);
+//        } while (x < 200);
+
+//        int x = 100;
+//        do {
+//            System.out.println(x -= 5);
+//        } while (x > -10);
+
+//        long x = 2;
+//        do {
+//            System.out.println(x);
+//            x *= x;
+//        } while (x <= 1000000);
+
+//        for (int i = 5; i <= 15; i++) {
+//            System.out.println(i);
+//        }
+
+//        for (int i = 0; i <= 200; i += 2) {
+//            System.out.println(i);
+//        }
+
+//        for (int i = 100; i >= -15; i -= 5) {
+//            System.out.println(i);
+//        }
+
+//        for (long i = 2; i <= 1000000; i *= i) {
+//            System.out.println(i);
+//        }
+
+//        for(int i = 0; i <= 100; i++) {
+//            if (i % 15 == 0) {
+//                System.out.println("FizzBuzz");
+//            } else {
+//                if (i % 5 == 0) {
+//                    System.out.println("Buzz");
+//                }else {
+//                    if (i % 3 == 0) {
+//                        System.out.println("Fizz");
+//                    }
+//                }
+//            }
+//        }
+
+
+        System.out.println("Give me a number.");
+        double input = Integer.parseInt(in.nextLine());
+
+        String number = "number";
+        String squared = "squared";
+        String cubed = "cubed";
+
+      final int iMax = 3;
+
+        System.out.println();
+        for (int i = 1; i <= 1; i++) {
+            System.out.printf("%10s | %9s | %9s |", number, squared, cubed);
         }
+
+        System.out.println();
+      for (int i = 1; i <= iMax; i++) {
+          System.out.printf("%10s |", "-------");
+      }
+        System.out.println();
+
+      for (double x = 1; x <= input; x++) {
+          for (int i = 1; i <= iMax; i++) {
+              System.out.printf("%10.0f |", Math.pow(x, i));
+          }
+          System.out.println();
+      }
+
+
+        System.out.println("GIVE ME YOUR GRADE FROM 0 TO 100!");
+        double grade = Integer.parseInt(in.nextLine());
+
+                if (grade <= 100 && grade >= 88) {
+                    System.out.println("Your letter grade is: A");
+                } else {
+                    if (grade <= 87 && grade >= 80) {
+                        System.out.println("Your letter grade is: B");
+                    } else {
+                        if (grade <= 79 && grade >= 67) {
+                            System.out.println("Your letter grade is: C");
+                        }
+                        if (grade <= 66 && grade >= 60) {
+                            System.out.println("Your letter grade is: D");
+                        }
+                        if (grade <= 59 && grade >= 0) {
+                            System.out.println("Your letter grade is: F");
+                        }
+                    }
+                }
+
 
     }
 }
