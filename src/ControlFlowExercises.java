@@ -143,28 +143,27 @@ public class ControlFlowExercises {
 
         //Grading Scale
         boolean decision = true;
-//        System.out.println("Do you want to know your grade?");
         while (decision) {
             System.out.println("GIVE ME YOUR GRADE FROM 0 TO 100!");
             int grade = in.nextInt();
             if (grade <= 100 && grade >= 95) {
-                System.out.println("Your letter grade is: A+");
+                System.out.println("A+");
             } else if (grade <= 94 && grade >= 88) {
-                System.out.println("Your letter grade is: A");
+                System.out.println("A");
             } else if (grade <= 87 && grade >= 85) {
-                System.out.println("Your letter grade is: B+");
+                System.out.println("B+");
             } else if (grade <= 84 && grade >= 80) {
-                System.out.println("Your letter grade is: B");
+                System.out.println("B");
             } else if (grade <= 79 && grade >= 74) {
-                System.out.println("Your letter grade is: C+");
+                System.out.println("C+");
             } else if (grade <= 73 && grade >= 67) {
-                System.out.println("Your letter grade is: C");
+                System.out.println("C");
             } else if (grade <= 66 && grade >= 64) {
-                System.out.println("Your letter grade is: D+");
+                System.out.println("D+");
             } else if (grade <= 63 && grade >= 60) {
-                System.out.println("Your letter grade is: D");
+                System.out.println("D");
             } else if (grade <= 59 && grade >= 0) {
-                System.out.println("Your letter grade is: F");
+                System.out.println("F");
             }
             System.out.println("Do you want to enter another number? (Y/N)");
             String userChoice = in.next();
