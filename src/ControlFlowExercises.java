@@ -92,7 +92,7 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 
-//        for (int i = 100; i >= -15; i -= 5) {
+//        for (int i = 100; i >= -10; i -= 5) {
 //            System.out.println(i);
 //        }
 
@@ -103,66 +103,76 @@ public class ControlFlowExercises {
 //        for(int i = 0; i <= 100; i++) {
 //            if (i % 15 == 0) {
 //                System.out.println("FizzBuzz");
-//            } else {
-//                if (i % 5 == 0) {
+//            } else if (i % 5 == 0) {
 //                    System.out.println("Buzz");
-//                }else {
-//                    if (i % 3 == 0) {
+//                }else if (i % 3 == 0) {
 //                        System.out.println("Fizz");
-//                    }
+//                    }else {
+//                  System.out.println(i);
 //                }
 //            }
+
+
+//        System.out.println("Give me a number.");
+//        double input = Integer.parseInt(in.nextLine());
+//
+//        String number = "number";
+//        String squared = "squared";
+//        String cubed = "cubed";
+//
+//        final int iMax = 3;
+//
+//        System.out.println();
+//        for (int i = 1; i <= 1; i++) {
+//            System.out.printf("%10s | %9s | %9s |", number, squared, cubed);
+//        }
+//
+//        System.out.println();
+//        for (int i = 1; i <= iMax; i++) {
+//            System.out.printf("%10s |", "-------");
+//        }
+//        System.out.println();
+//
+//        for (double x = 1; x <= input; x++) {
+//            for (int i = 1; i <= iMax; i++) {
+//                System.out.printf("%-10.0f |", Math.pow(x, i));
+//            }
+//            System.out.println();
 //        }
 
 
-        System.out.println("Give me a number.");
-        double input = Integer.parseInt(in.nextLine());
-
-        String number = "number";
-        String squared = "squared";
-        String cubed = "cubed";
-
-      final int iMax = 3;
-
-        System.out.println();
-        for (int i = 1; i <= 1; i++) {
-            System.out.printf("%10s | %9s | %9s |", number, squared, cubed);
+        //Grading Scale
+        boolean decision = true;
+//        System.out.println("Do you want to know your grade?");
+        while (decision) {
+            System.out.println("GIVE ME YOUR GRADE FROM 0 TO 100!");
+            int grade = in.nextInt();
+            if (grade <= 100 && grade >= 95) {
+                System.out.println("Your letter grade is: A+");
+            } else if (grade <= 94 && grade >= 88) {
+                System.out.println("Your letter grade is: A");
+            } else if (grade <= 87 && grade >= 85) {
+                System.out.println("Your letter grade is: B+");
+            } else if (grade <= 84 && grade >= 80) {
+                System.out.println("Your letter grade is: B");
+            } else if (grade <= 79 && grade >= 74) {
+                System.out.println("Your letter grade is: C+");
+            } else if (grade <= 73 && grade >= 67) {
+                System.out.println("Your letter grade is: C");
+            } else if (grade <= 66 && grade >= 64) {
+                System.out.println("Your letter grade is: D+");
+            } else if (grade <= 63 && grade >= 60) {
+                System.out.println("Your letter grade is: D");
+            } else if (grade <= 59 && grade >= 0) {
+                System.out.println("Your letter grade is: F");
+            }
+            System.out.println("Do you want to enter another number? (Y/N)");
+            String userChoice = in.next();
+            if(userChoice.equalsIgnoreCase("n")){
+                decision = false;
+            }
         }
-
-        System.out.println();
-      for (int i = 1; i <= iMax; i++) {
-          System.out.printf("%10s |", "-------");
-      }
-        System.out.println();
-
-      for (double x = 1; x <= input; x++) {
-          for (int i = 1; i <= iMax; i++) {
-              System.out.printf("%10.0f |", Math.pow(x, i));
-          }
-          System.out.println();
-      }
-
-
-        System.out.println("GIVE ME YOUR GRADE FROM 0 TO 100!");
-        double grade = Integer.parseInt(in.nextLine());
-
-                if (grade <= 100 && grade >= 88) {
-                    System.out.println("Your letter grade is: A");
-                } else {
-                    if (grade <= 87 && grade >= 80) {
-                        System.out.println("Your letter grade is: B");
-                    } else {
-                        if (grade <= 79 && grade >= 67) {
-                            System.out.println("Your letter grade is: C");
-                        }
-                        if (grade <= 66 && grade >= 60) {
-                            System.out.println("Your letter grade is: D");
-                        }
-                        if (grade <= 59 && grade >= 0) {
-                            System.out.println("Your letter grade is: F");
-                        }
-                    }
-                }
+        System.out.println("Have a good day!");
 
 
     }
