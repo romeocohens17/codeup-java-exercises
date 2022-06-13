@@ -73,7 +73,11 @@ public class MethodsExercises {
         } else if (userInput >= 1 && userInput <= 10) {
             for (int i = 1; i <= userInput; i++) {
                 int sum = factor *= i;
-                System.out.println(i + "! = " + 1 + " x " + i + " = " + sum);
+                String out = "";
+                for (int j = 1; j <= i; j++) {
+                    out += " x " + j;
+                }
+                System.out.println(i + "! = " + out + " = " + sum);
             }
             System.out.println("Do you want to continue? (Y/N)");
             String userChoice = scan.next();
