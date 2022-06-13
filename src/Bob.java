@@ -8,7 +8,6 @@ public class Bob {
 
         boolean loveBob = true;
         while(loveBob) {
-            System.out.println("Bob says hello!");
             String userResponse = scanner.nextLine();
             if (userResponse.toLowerCase().endsWith("?")) {
                 System.out.println("Sure.");
@@ -20,9 +19,11 @@ public class Bob {
                 System.out.println("Whatever.");
             }
             if (userResponse.equalsIgnoreCase("bye")) {
+                System.out.println("Bye...");
                 loveBob = false;
             }
         }
+
 
 
     }
