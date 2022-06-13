@@ -8,7 +8,7 @@ public class Bob {
 
         boolean loveBob = true;
         while(loveBob) {
-            String userResponse = scanner.next();
+            String userResponse = scanner.nextLine();
             if (userResponse.endsWith("?")) {
                 System.out.println("Sure.");
             } else if (userResponse.endsWith("!")) {
