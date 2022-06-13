@@ -9,9 +9,9 @@ public class Bob {
         boolean loveBob = true;
         while(loveBob) {
             String userResponse = scanner.next();
-            if (userResponse.toLowerCase().endsWith("?")) {
+            if (userResponse.endsWith("?")) {
                 System.out.println("Sure.");
-            } else if (userResponse.toLowerCase().endsWith("!")) {
+            } else if (userResponse.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
             } else if (userResponse.equalsIgnoreCase("")) {
                 System.out.println("Fine. Be that way!");
