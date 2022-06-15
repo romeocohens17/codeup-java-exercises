@@ -4,45 +4,42 @@ public class HighLow {
 
     static Scanner scan = new Scanner(System.in);
 
-    public static void guessingGame() {
-        System.out.println("Guess a number between 1 and 100");
-        int userGuess = scan.nextInt();
-        int randomNumber = (int) (Math.random() * (100 - 1)) + 1;
-        if (userGuess < 1) {
-            System.out.println("HIGHER");
-            guessingGame();
-        }else if (userGuess > 100) {
-            System.out.println("LOWER");
-            guessingGame();
-        }else if (userGuess == randomNumber) {
-            System.out.printf("GOOD GUESS! %n Your number was %d%n Random number was %d%n", userGuess, randomNumber);
-        }else if (userGuess >= 1 && userGuess <= 100) {
-            System.out.printf("NICE TRY! %n Your number was %d%n Random number was %d%n", userGuess, randomNumber);
+    public static void guessingGame(int numberOfGuesses, int randomNumber) {
+        if (numberOfGuesses < 1) {
+            System.out.println("YOU LOSE!");
+        } else{
+            System.out.println("Guess a number between 1 and 100");
+            System.out.println("You have " + numberOfGuesses + " trys to guess the correct number!");
+            --numberOfGuesses;
+            int userGuess = scan.nextInt();
+            if (userGuess > randomNumber) {
+                System.out.println("LOWER");
+                guessingGame(numberOfGuesses, randomNumber);
+            }else if (userGuess < randomNumber) {
+                System.out.println("HIGHER");
+                guessingGame(numberOfGuesses, randomNumber);
+            }else {
+                int guesses = 10 - numberOfGuesses;
+                System.out.printf("GOOD GUESS! %n Your number was %d%n Random number was %d%n", userGuess, randomNumber);
+                System.out.println("You guessed " + guesses + " times!");
+            }
         }
-        System.out.println("Do you want to guess again? Y/N");
-        String choice = scan.next();
-        if (choice.equalsIgnoreCase("y")) {
-            guessingGame();
-        }
-
     }
-
-
-
-
-
-
-
-
 
     public static void main(String[] args){
 
-
         //Guessing Game
-        guessingGame();
+        int randomNumber = (int) (Math.random() * (100 - 1)) + 1;
 
-
-
+        boolean keepPlaying = true;
+        while(keepPlaying){
+            guessingGame(10, randomNumber);
+            System.out.println("Do you want to play again? Y/N");
+            String choice = scan.next();
+            if (choice.equalsIgnoreCase("n")) {
+                keepPlaying = false;
+            }
+        }
 
 
     }
