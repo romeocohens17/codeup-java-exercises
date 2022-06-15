@@ -48,19 +48,13 @@ public class MethodsExercises {
 //    }
 
 //    Return User Input in certain range
-    public static void range(int min, int max) {
+    public static int range(int min, int max) {
         System.out.printf("Give me a number between %d and %d", min, max);
         int userInput = scan.nextInt();
         if (userInput < min || userInput > max) {
-            System.out.printf("GIVE ME A VALID NUMBER BETWEEN %d and %d%n", min, max);
-        } else if (userInput >= min && userInput <= max) {
-            System.out.printf("That is a valid number: %d%n", userInput);
-        }
-        System.out.println("Do you want to enter another number? (Y/N)");
-        String userChoice = scan.next();
-        if (userChoice.equalsIgnoreCase("y")) {
             range(min, max);
         }
+        return userInput;
     }
 
 //    Return Factorial
@@ -69,7 +63,7 @@ public class MethodsExercises {
         int userInput = scan.nextInt();
         int factor = 1;
         if (userInput < 1 || userInput > 10) {
-            System.out.println("GIVE ME A VALID NUMBER BETWEEN 1 AND 10%n");
+            factorial();
         } else if (userInput >= 1 && userInput <= 10) {
             for (int i = 1; i <= userInput; i++) {
                 int sum = factor *= i;
@@ -112,7 +106,7 @@ public class MethodsExercises {
 //        System.out.println(recursion(10, 10));
 //
 //        //Get integer in this range
-        range(30, 47);
+        System.out.println(range(30, 47));
 
         //Get Factorial
         factorial();
