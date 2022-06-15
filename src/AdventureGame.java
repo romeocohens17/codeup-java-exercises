@@ -53,9 +53,9 @@ public class AdventureGame {
                         if (passDirection.equalsIgnoreCase("out-left")) {
                             health--;
                             System.out.printf("CMON! THE DEFENSE JUST INTERCEPTED THAT PASS, I THOUGHT YOU WERE A QB!?\nYOU ONLY HAVE %d MORE ATTEMPTS!\nGET YOUR HEAD IN THE GAME QB!", health);
-                        }else if (passDirection.equalsIgnoreCase("middle")) {
+                        }else if(passDirection.equalsIgnoreCase("middle")) {
                             System.out.printf("GREAT CALL! YOU BEAT THE DEFENSE WITH THAT DIG ROUTE!\nYOU HAVE %d YARDS TO GO!", yardsToGo - 15);
-                        } else if (passDirection.equalsIgnoreCase("out-right")) {
+                        }else if(passDirection.equalsIgnoreCase("out-right")) {
                             health--;
                             System.out.printf("CMON! THE DEFENSE JUST INTERCEPTED THAT PASS, I THOUGHT YOU WERE A QB!?\nYOU ONLY HAVE %d MORE ATTEMPTS!\nGET YOUR HEAD IN THE GAME QB!", health);
                         }
@@ -66,10 +66,17 @@ public class AdventureGame {
                         if (passDirection.equalsIgnoreCase("out-left")) {
                             health--;
                             System.out.printf("INTERCEPTION! YOU SHOULD KNOW NOT TO THROW UP THE SIDELINE AGAINST COVER 2!\nYOU ONLY HAVE %d MORE ATTEMPTS!\nGET YOUR HEAD IN THE GAME QB!", health);
+                        }else if(passDirection.equalsIgnoreCase("middle")) {
+                            System.out.printf("PERFECT CALL! THE WEAK SPOT TO A COVER 2 IS DEEP MIDDLE! YOU PICKED UP 25 YARDS WITH THAT POST ROUTE!\nYOU HAVE %d YARDS TO GO!", yardsToGo - 25);
+                        }else if(passDirection.equalsIgnoreCase("out-right")) {
+                            health--;
+                            System.out.printf("INTERCEPTION! YOU SHOULD KNOW NOT TO THROW UP THE SIDELINE AGAINST COVER 2!\nYOU ONLY HAVE %d MORE ATTEMPTS!\nGET YOUR HEAD IN THE GAME QB!", health);
                         }
                     }
                 }
         }
+            System.out.printf("\nATTEMPTS: %d\nYARDS TO GO: %d\n**You're still in a 5 Wide Spread Offense.**\n**The Defense is now in a Cover 3 scheme.**\nWHAT IS THE PLAY CALL (PASS OR RUN)?",health, yardsToGo);
+            scan.nextLine();
     }
 
 
@@ -77,15 +84,6 @@ public class AdventureGame {
 
         //Adventure Game
         mainAdventureGame(3, 80);
-//        boolean startGame = true;
-//        while (startGame) {
-//            adventureGame(100);
-//            System.out.println("START GAME: YES/NO)");
-//            String choice = scan.next();
-//            if (choice.equalsIgnoreCase("no")) {
-//                startGame = false;
-//            }
-//        }
 
 
     }
