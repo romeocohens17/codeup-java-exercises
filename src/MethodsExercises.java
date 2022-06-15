@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -81,6 +82,19 @@ public class MethodsExercises {
         }
     }
 
+    public static void diceRoll() {
+        System.out.println("How many sides on your die?");
+        int sideCount = scan.nextInt();
+        int die1 = (int) (Math.random() * sideCount) + 1;
+        int die2 = (int) (Math.random() * sideCount) + 1;
+        System.out.printf("First Die: %d%nSecond Die: %d%n", die1, die2);
+        System.out.println("Do you want to roll again?");
+        String choice = scan.next();
+        if (choice.equalsIgnoreCase("y")) {
+            diceRoll();
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -110,6 +124,9 @@ public class MethodsExercises {
 
         //Get Factorial
         factorial();
+
+        //Dice Roll
+        diceRoll();
 
 
     }
