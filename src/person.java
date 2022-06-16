@@ -1,5 +1,5 @@
 public class person {
-   public String name;
+   private String name;
    public int age;
    public String occupation;
    public String home;
@@ -15,16 +15,33 @@ public class person {
         this.home = home;
     }
 
-    public person(){
+    public void getName(String name) {
+        this.name = name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer setAge(int age) {
+        return this.age = age;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public person() {
     }
 
     public static void main(String[] args) {
         person romeo = new person("Romeo", 24, "Washington State", "Linguist/Software Engineer");
-//        romeo.name = "Romeo";
-//        romeo.age = 24;
-//        romeo.occupation = "Linguist/Software Engineer";
-//          romeo.home = "Washington State"
-
+        person romeo2 = romeo;
+        romeo.setName("Rome");
+        romeo.getName(romeo.name);
+        romeo2.getName(romeo.name);
+        System.out.println(romeo.name);
+        System.out.println(romeo.name);
         System.out.println(romeo.sayHello());
     }
 }
