@@ -8,6 +8,24 @@ public class Square extends Rectangle {
         this.side = side;
     }
 
+    public int getSide() {
+        return side;
+    }
+
+    public void setSide(int side) {
+        this.side = side;
+        this.width = side;
+        this.length = side;
+    }
+
+    public void setLength(int side) {
+        setSide(side);
+    }
+
+    public void setWidth(int side) {
+        setSide(side);
+    }
+
     @Override
     public double getArea() {
         return side * side;
@@ -17,7 +35,5 @@ public class Square extends Rectangle {
     public double getPerimeter() {
         return 4 * side;
     }
-
-
 }
 
