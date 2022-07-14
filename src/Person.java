@@ -4,6 +4,27 @@ public class Person {
    public String occupation;
    public String home;
 
+    public Person(String name) {
+        this.name = name;
+    }
+
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
+    }
+
+    public String getHome() {
+        return home;
+    }
+
+    public void setHome(String home) {
+        this.home = home;
+    }
+
     public String sayHello() {
         return String.format("Hello, my name is %s, and I am %d years old. I am from %s and I am a %s.", this.name, this.age, this.home, this.occupation);
     }
@@ -15,8 +36,8 @@ public class Person {
         this.home = home;
     }
 
-    public void getName(String name) {
-        this.name = name;
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
@@ -38,8 +59,8 @@ public class Person {
         Person romeo = new Person("Romeo", 24, "Washington State", "Linguist/Software Engineer");
         Person romeo2 = romeo;
         romeo.setName("Rome");
-        romeo.getName(romeo.name);
-        romeo2.getName(romeo.name);
+        romeo.getName();
+        romeo2.getName();
         System.out.println(romeo.name);
         System.out.println(romeo.name);
         System.out.println(romeo.sayHello());

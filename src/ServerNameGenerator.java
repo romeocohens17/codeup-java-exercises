@@ -16,7 +16,6 @@ public class ServerNameGenerator {
         return finalString;
     }
 
-
     public static void main(String[] args) {
         System.out.println("Your team name is the:");
         System.out.println(makeTeamName(teamCity, teamName));
