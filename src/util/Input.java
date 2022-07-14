@@ -73,7 +73,7 @@ public class Input {
         }
 
         public Double getDouble () {
-            System.out.println("What is your favorite number?%n");
+            System.out.println("What is your favorite number?\n");
             double favorite;
             try {
                 favorite = Double.valueOf(getString());
@@ -83,6 +83,9 @@ public class Input {
                 return getDouble();
             }
         }
+
+    public void clear() {
+    }
 
 
 //        public static void main (String[]args){
