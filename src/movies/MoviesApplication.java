@@ -19,6 +19,14 @@ public class MoviesApplication {
                 System.out.println("4 - Horror movies");
                 System.out.println("5 - Sci-fi movies");
                 System.out.println("6 - Add A Movie");
+//                System.out.println("Select A Movie\n" +
+//               "0 - Exit\n" +
+//                "1 - See all movies\n" +
+//                "2 - Musical movies\n" +
+//                "3 - Drama movies\n" +
+//                "4 - Horror movies\n" +
+//                "5 - Sci-fi movies\n" +
+//                "6 - Add A Movie\n");
                 int num = sc.getIntSec(0, 6);
                 switch (num) {
                     case (0):
@@ -100,5 +108,6 @@ public class MoviesApplication {
 
         public static void main(String[] args) {
             movieApp();
+
         }
     }
