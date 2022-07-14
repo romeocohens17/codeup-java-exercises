@@ -7,7 +7,4 @@ public interface Measurable {
     void turnLaptopIntoFrisbee();
     String findSolutionToError();
 
-
-
-
 }

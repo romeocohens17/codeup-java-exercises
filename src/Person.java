@@ -1,4 +1,4 @@
-public class person {
+public class Person {
    private String name;
    public int age;
    public String occupation;
@@ -8,7 +8,7 @@ public class person {
         return String.format("Hello, my name is %s, and I am %d years old. I am from %s and I am a %s.", this.name, this.age, this.home, this.occupation);
     }
 
-    public person(String name, int age,String home, String occupation) {
+    public Person(String name, int age, String home, String occupation) {
         this.name = name;
         this.age = age;
         this.occupation = occupation;
@@ -31,12 +31,12 @@ public class person {
         return this.age;
     }
 
-    public person() {
+    public Person() {
     }
 
     public static void main(String[] args) {
-        person romeo = new person("Romeo", 24, "Washington State", "Linguist/Software Engineer");
-        person romeo2 = romeo;
+        Person romeo = new Person("Romeo", 24, "Washington State", "Linguist/Software Engineer");
+        Person romeo2 = romeo;
         romeo.setName("Rome");
         romeo.getName(romeo.name);
         romeo2.getName(romeo.name);
