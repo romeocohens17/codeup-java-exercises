@@ -1,40 +1,29 @@
 package movies;
 
 public class Movie {
-    String title;
-    String genre;
-    String priority;
+    private String name;
+    private String category;
 
-    public Movie() {
+    public Movie(){}
+
+    public Movie(String name, String category) {
+        this.name = name;
+        this.category = category;
     }
 
-    public Movie(String title, String genre, String priority) {
-        this.title = title;
-        this.genre = genre;
-        this.priority = priority;
+    public String getName() {
+        return name;
     }
 
-    public String getTitle() {
-        return title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getCategory() {
+        return category;
     }
 
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public String getPriority() {
-        return priority;
-    }
-
-    public void setPriority(String priority) {
-        this.priority = priority;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
