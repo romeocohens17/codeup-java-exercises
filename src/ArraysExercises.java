@@ -1,8 +1,8 @@
 import java.util.Arrays;
 
 public class ArraysExercises {
-    public static Person[] addPerson(Person[] array, Person newPerson) {
-        Person[] people = Arrays.copyOf(array, array.length + 1);
+    public static PersonLecture[] addPerson(PersonLecture[] array, PersonLecture newPerson) {
+        PersonLecture[] people = Arrays.copyOf(array, array.length + 1);
         people[array.length] = newPerson; // Also works: people[people.length - 1]
         return people;
     }
@@ -28,18 +28,18 @@ public class ArraysExercises {
 
         int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(numbers));
-        Person[] people = new Person[3];
-        people[0] = new Person("Romeo");
-        people[1] = new Person("Sammy");
-        people[2] = new Person("Ellie");
-        for (Person person : people) {
+        PersonLecture[] people = new PersonLecture[3];
+        people[0] = new PersonLecture("Romeo");
+        people[1] = new PersonLecture("Sammy");
+        people[2] = new PersonLecture("Ellie");
+        for (PersonLecture person : people) {
             System.out.println(person.getName());
         }
 
         System.out.println("~~~~~~~~~~~~~~~~~~");
-        Person sophia = new Person("Skie");
+        PersonLecture sophia = new PersonLecture("Skie");
         people = addPerson(people, sophia);
-        for (Person person : people) {
+        for (PersonLecture person : people) {
             System.out.println(person.getName());
         }
     }

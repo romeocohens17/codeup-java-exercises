@@ -1,68 +1,36 @@
 public class Person {
-   private String name;
-   public int age;
-   public String occupation;
-   public String home;
+    private String firstname;
+    private String lastname;
 
-    public Person(String name) {
-        this.name = name;
+    public Person(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 
-
-    public String getOccupation() {
-        return occupation;
-    }
-
-    public void setOccupation(String occupation) {
-        this.occupation = occupation;
-    }
-
-    public String getHome() {
-        return home;
-    }
-
-    public void setHome(String home) {
-        this.home = home;
-    }
-
-    public String sayHello() {
-        return String.format("Hello, my name is %s, and I am %d years old. I am from %s and I am a %s.", this.name, this.age, this.home, this.occupation);
-    }
-
-    public Person(String name, int age, String home, String occupation) {
-        this.name = name;
-        this.age = age;
-        this.occupation = occupation;
-        this.home = home;
-    }
-
-    public String getName() {
+    public String getName(String firstname, String lastname){
+//TODO: return the person's name
+        String name = firstname + " " + lastname;
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String firstname, String lastname){
+//TODO: change the name field to the passed value
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+    public void sayHello(){
+//TODO: print a message to the console using the person's name
+        System.out.printf("Hello, my name is %s %s!", firstname, lastname);
     }
 
-    public Integer setAge(int age) {
-        return this.age = age;
-    }
-
-    public int getAge() {
-        return this.age;
-    }
-
-    public Person() {
-    }
 
     public static void main(String[] args) {
-        Person romeo = new Person("Romeo", 24, "Washington State", "Linguist/Software Engineer");
-        Person romeo2 = romeo;
-        romeo.setName("Rome");
-        romeo.getName();
-        romeo2.getName();
-        System.out.println(romeo.name);
-        System.out.println(romeo.name);
-        System.out.println(romeo.sayHello());
+        Person person = new Person("Sammy", "Man");
+        System.out.println(person.firstname);
+        System.out.println(person.getName("River", "Run"));
+        person.setName("Jack", "Frost");
+        System.out.println(person.firstname);
+        person.sayHello();
+
+
     }
 }
